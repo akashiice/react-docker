@@ -1,0 +1,12 @@
+language: generic
+
+sudo: required
+
+servics:
+    - docker
+
+before_install:
+    - docker build -t akashiice/react-docker -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true akashiice/react-docker npm run test -- --coverage
