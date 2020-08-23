@@ -13,10 +13,10 @@ script:
 
 deploy:
     provider: elasticbeanstalk
-    region: "ap-south-1"
+    region: "us-east-1"
     app: "docker-react"
     env: "DockerReact-dev"
-    bucket_name: "elasticbeanstalk-ap-south-1-944093395421"
+    bucket_name: "elasticbeanstalk-us-east-1-944093395421"
     bucket_path: "docker-react"
     on:
         branch: master
